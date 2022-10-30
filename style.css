@@ -1,13 +1,9 @@
 :root {
-    /*
-    MONOMETALIC PALETTE by Darkeyed-Commission Open
-    https://lospec.com/palette-list/monometalic
-    */
-    --color_text: #ece6df;
-    --color_accent: #cebdb0;
-    --color_bacbkground_light: #585783;
-    --color_bacbkground_dark: #2c2851;
-
+    --color_text: #EEF2E6;
+    --color_accent: #D6CDA4;
+    --color_background_light: #3D8361;
+    --color_background_dark: #1C6758;
+    --navbar_height: 3rem;
   }
 
 * {
@@ -23,7 +19,7 @@
  
 body {
     height: 100%;
-    background-color: var(--color_bacbkground_light);
+    background-color: var(--color_background_light);
 }
 
 html {
@@ -31,18 +27,96 @@ html {
     scroll-behavior: smooth;
 }
 
+/* =========== navbar =========== */
 nav {
     width: 100%;
-    height: 60px;
-    background-color: var(--color_bacbkground_dark);
+    height: var(--navbar_height);
+    background-color: var(--color_background_dark);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid var(--color_text);
 }
 
+/* logo */
 nav .logo {
     height: 100%;
-    width: 15rem;
+    width: 16rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     text-transform: uppercase;
-  }
+}
+
+/* button */
+.menu_btn {
+    height: var(--navbar_height);
+    width: calc(var(--navbar_height) *2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu_btn_symbol {
+    font-size: 2rem;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(180deg)
+}
+
+.menu_btn_symbol:hover {
+    color: var(--color_accent);
+}
+
+nav.open .menu_btn_symbol {
+    transform: rotate(0) scale(0.9, 0.9)
+}
+
+/* list */
+nav ul {
+    position: absolute;
+    top: var(--navbar_height);
+    left: -100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    background-color: var(--color_background_light);
+    transition: all 0.2s ease-in-out;
+}
+
+nav.open ul {
+    left: 0;
+
+}
+
+nav ul li {
+    margin: auto;
+    width: 80%;
+    height: 3rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.045);
+}
+
+nav ul li:last-child {
+    border: none;
+}
+
+nav ul li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--color_accent);
+    transform: scale(0.9, 1);
+}
+
+nav .open ul {
+    left: 0;
+}
