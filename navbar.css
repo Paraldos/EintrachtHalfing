@@ -1,0 +1,109 @@
+/* =========== navbar =========== */
+nav {
+  color: var(--color_text);
+  width: 100%;
+  height: var(--navbar_height);
+  background-color: var(--color_background_dark);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--navbar_border) solid var(--color_text);
+}
+
+/* button */
+.menu_btn {
+  display: none;
+}
+
+/* logo */
+nav .logo {
+  color: var(--color_text);
+  height: 100%;
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* list */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+nav ul li {
+  padding: 0 1rem;
+  height: 100%;
+}
+
+nav ul li a {
+  color: var(--color_text);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: var(--color_accent);
+  transform: scaleX(0.95);
+}
+
+@media (max-width: 1250px) {
+  /* button */
+  .menu_btn {
+    height: calc(var(--navbar_height) - var(--navbar_border));
+    width: calc(var(--navbar_height) * 2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu_btn_symbol {
+    font-size: 2rem;
+    align-self: center;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(180deg);
+  }
+
+  .menu_btn_symbol:hover {
+    color: var(--color_accent);
+  }
+
+  nav.open .menu_btn_symbol {
+    transform: rotate(0) scale(0.8, 0.8);
+  }
+
+  /* navlist */
+  nav ul {
+    position: absolute;
+    top: var(--navbar_height);
+    left: -100%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color_background_light);
+    transition: all 0.2s ease-in-out;
+  }
+
+  nav.open ul {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: auto;
+    width: 80%;
+    height: 3rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.045);
+  }
+
+  nav ul li:last-child {
+    border: none;
+  }
+}
