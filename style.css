@@ -32,17 +32,40 @@ html {
 main {
   max-width: 800px;
   min-height: calc(100% - var(--navbar_height));
-  padding-top: var(--navbar_height);
   margin: auto;
+}
+
+section {
+  padding: 3rem 1rem;
 }
 
 article {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 0;
 }
 
-.landing {
-  min-height: calc(100vh - var(--navbar_height));
+p {
+  padding: 0.5rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+h4 {
+  padding: 0.5rem 0;
+}
+
+/* Landing */
+#landing {
+  min-height: 100vh;
+  padding-top: var(--navbar_height);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,21 +85,31 @@ article {
   height: 7rem;
 }
 
-.landing h1 {
+#landing h1 {
   font-size: 3rem;
   text-align: center;
   padding: 1rem;
 }
 
-.landing h2 {
+#landing h2 {
   font-size: 1.5rem;
+  padding: 0;
 }
 
-article p {
-  text-align: center;
+/* ueber uns */
+
+@media (max-width: 680px) {
+  * {
+    font-size: 15px;
+  }
+
+  #landing h1 {
+    font-size: 2rem;
+  }
 }
 
-article h2 {
-  padding: 1rem;
-  text-align: center;
+@media (max-width: 340px) {
+  * {
+    font-size: 10px;
+  }
 }
