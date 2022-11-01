@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&family=Roboto:wght@300&display=swap");
 
 :root {
-  --color_text: #eef2e6;
-  --color_text_dark: #080808;
-  --color_accent: #d6cda4;
-  --color_background_light: #3d8361;
-  --color_background_dark: #1c6758;
+  --navbar_darkBg: #1c6758;
+  --navbar_lightBg: #3d8361;
+  --navbar_text: #f2f2f2;
+  --navbar_accent: #d6cda4;
   --navbar_height: 3rem;
   --navbar_border: 5px;
+  --color_text: #090909;
+  --color_background: rgb(191, 214, 191);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*color: var(--color_text_dark);*/
+  color: var(--color_text);
   text-decoration: none;
   list-style: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
 
 body {
-  background-color: var(--color_accent);
+  background-color: var(--color_background);
 }
 
 html {
@@ -38,7 +39,8 @@ main {
 }
 
 section {
-  padding: 1rem 1rem
+  padding: 1.5rem;
+  padding-top: var(--navbar_height);
 }
 
 article {
@@ -51,31 +53,34 @@ article:last-child {
   border: none;
 }
 
-p {
+p,
+h2,
+h3,
+h4 {
   padding: 0.5rem 0;
 }
 
 h2 {
   font-size: 1.5rem;
-  padding: 0.5rem 0;
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.2rem;
-  padding: 0.5rem 0;
-}
-
-h4 {
-  padding: 0.5rem 0;
 }
 
 img {
-  max-width: 100vw;
+  max-width: 100%;
   max-height: calc(100vh - var(--navbar_height) - var(--navbar_height));
-  padding: 2px;
+  padding: 3px;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 2px solid var(--color_text);
+}
+
+.img_description {
+  font-size: 0.8rem;
+  padding: 0;
+  padding-bottom: 0.5rem;
 }
 
 /* Landing */
@@ -106,7 +111,7 @@ img {
   font-size: 3rem;
   text-align: center;
   padding: 1rem;
-  font-family: 'Germania One', cursive;
+  font-family: "Germania One", cursive;
 }
 
 #landing h2 {
@@ -115,9 +120,38 @@ img {
 }
 
 /* ueber uns */
+.grid_vorstand {
+  padding: 0.5rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+}
+
+.grid_vorstand p {
+  padding: 0;
+}
+
+/* impressum */
+#impressum p {
+  padding: 0;
+  padding-left: 1rem;
+}
 
 @media (max-width: 680px) {
+  section {
+    padding: 0.5rem;
+    padding-top: var(--navbar_height);
+  }
+
+  /* Landing */
   #landing h1 {
     font-size: 2rem;
+  }
+
+  /* ueber uns */
+  .grid_vorstand {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
   }
 }

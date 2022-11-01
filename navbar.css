@@ -6,11 +6,11 @@ nav {
   width: 100%;
   height: var(--navbar_height);
   /* */
-  background-color: var(--color_background_dark);
-  color: var(--color_text);
+  background-color: var(--navbar_darkBg);
+  color: var(--navbar_text);
   display: flex;
   justify-content: space-between;
-  border-bottom: var(--navbar_border) solid var(--color_text);
+  border-bottom: var(--navbar_border) solid var(--navbar_text);
 }
 
 /* button */
@@ -20,7 +20,7 @@ nav {
 
 /* logo */
 nav .logo {
-  color: var(--color_text);
+  color: var(--navbar_text);
   height: 100%;
   width: 16rem;
   display: flex;
@@ -28,6 +28,10 @@ nav .logo {
   align-items: center;
   font-size: 1rem;
   text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+nav .logo:hover {
+  color: var(--navbar_accent);
 }
 
 /* list */
@@ -43,7 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--color_text);
+  color: var(--navbar_text);
   height: 100%;
   width: 100%;
   display: flex;
@@ -53,7 +57,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--color_accent);
+  color: var(--navbar_accent);
   transform: scaleX(0.95);
 }
 
@@ -68,6 +72,7 @@ nav ul li a:hover {
   }
 
   .menu_btn_symbol {
+    color: var(--navbar_text);
     font-size: 2rem;
     align-self: center;
     transition: all 0.2s ease-in-out;
@@ -75,7 +80,7 @@ nav ul li a:hover {
   }
 
   .menu_btn_symbol:hover {
-    color: var(--color_accent);
+    color: var(--navbar_accent);
   }
 
   nav.open .menu_btn_symbol {
@@ -92,7 +97,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--color_background_light);
+    background-color: var(--navbar_lightBg);
     transition: all 0.2s ease-in-out;
   }
 
