@@ -1,9 +1,13 @@
 /* =========== navbar =========== */
 nav {
-  color: var(--color_text);
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: var(--navbar_height);
+  /* */
   background-color: var(--color_background_dark);
+  color: var(--color_text);
   display: flex;
   justify-content: space-between;
   border-bottom: var(--navbar_border) solid var(--color_text);

@@ -32,6 +32,7 @@ html {
 main {
   max-width: 800px;
   min-height: calc(100% - var(--navbar_height));
+  padding-top: var(--navbar_height);
   margin: auto;
 }
 
@@ -50,10 +51,13 @@ article {
 
 .landing_images {
   display: flex;
+  padding-bottom: 1rem;
 }
+
 .landing_images li {
   padding: 0 2rem;
 }
+
 .landing_images img {
   height: 7rem;
 }
@@ -66,4 +70,13 @@ article {
 
 .landing h2 {
   font-size: 1.5rem;
+}
+
+article p {
+  text-align: center;
+}
+
+article h2 {
+  padding: 1rem;
+  text-align: center;
 }
