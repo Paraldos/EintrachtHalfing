@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Germania+One&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 :root {
   --navbar_darkBg: #1c6758;
@@ -8,7 +9,8 @@
   --navbar_height: 3rem;
   --navbar_border: 5px;
   --color_text: #090909;
-  --color_background: rgb(191, 214, 191);
+  --color_background_light: #dfdac6;
+  --color_background_dark: #71af91;
 }
 
 * {
@@ -18,12 +20,8 @@
   color: var(--color_text);
   text-decoration: none;
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
-}
-
-body {
-  background-color: var(--color_background);
 }
 
 html {
@@ -60,6 +58,10 @@ h4 {
   padding: 0.5rem 0;
 }
 
+p {
+  padding-left: 0.7rem;
+}
+
 h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -77,13 +79,63 @@ img {
   border: 2px solid var(--color_text);
 }
 
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: linear-gradient(
+    to right top,
+    var(--color_background_light),
+    var(--color_background_dark)
+  );
+}
+
 .img_description {
   font-size: 0.8rem;
   padding: 0;
   padding-bottom: 0.5rem;
 }
 
-/* Landing */
+/* ===================== article animation ===================== */
+article {
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateX(-2%);
+}
+
+section h2 {
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateX(-2%);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduce-motion) {
+  article {
+    transition: none;
+  }
+}
+
+/* ===================== Landing ===================== */
+.landing_background {
+  border: 0 solid black;
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  padding: 0;
+}
+
 #landing {
   min-height: 100vh;
   padding-top: var(--navbar_height);
@@ -93,18 +145,11 @@ img {
   align-items: center;
 }
 
-.landing_images {
-  display: flex;
-  padding-bottom: 1rem;
-}
-
-.landing_images li {
-  padding: 0 2rem;
-}
-
-.landing_images img {
+.landing_logo {
   height: 7rem;
   border: none;
+  margin-bottom: 2rem;
+  display: none;
 }
 
 #landing h1 {
@@ -112,14 +157,24 @@ img {
   text-align: center;
   padding: 1rem;
   font-family: "Germania One", cursive;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff,
+    1px -1px #fff, -1px 1px #fff;
 }
 
-#landing h2 {
+#landing h3 {
   font-size: 1.5rem;
   padding: 0;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff,
+    1px -1px #fff, -1px 1px #fff;
 }
 
-/* ueber uns */
+@media (max-width: 680px) {
+  #landing h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===================== ueber uns ===================== */
 .grid_vorstand {
   padding: 0.5rem 0;
   width: 100%;
@@ -132,21 +187,61 @@ img {
   padding: 0;
 }
 
-/* impressum */
+#freunde h3 {
+  margin-bottom: 1rem;
+}
+
+#freunde ul {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#freunde ul li {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+#freunde img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+#freunde ul a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#freunde ul li:hover {
+  transform: translateY(2%);
+}
+
+#freunde img {
+  border: none;
+}
+
+@media (max-width: 680px) {
+  #freunde ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== impressum  =====================*/
 #impressum p {
   padding: 0;
   padding-left: 1rem;
 }
 
+/* ===================== media querry ===================== */
+
 @media (max-width: 680px) {
   section {
-    padding: 0.5rem;
+    padding: 1rem;
     padding-top: var(--navbar_height);
-  }
-
-  /* Landing */
-  #landing h1 {
-    font-size: 2rem;
   }
 
   /* ueber uns */

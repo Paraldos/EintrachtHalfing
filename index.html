@@ -7,33 +7,16 @@
     <title>Eintracht Halfing</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css" />
+    <script defer src="main.js"></script>
+    <script defer src="https://kit.fontawesome.com/12bc7dd6b9.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="menu_btn">
-        <i class="menu_btn_symbol fa-regular fa-circle-right"></i>
-      </div>
-      <a class="logo" href="#landing">SG Eintracht Halfing e.V.</a>
-      <ul class="nav_links">
-        <li><a href="#ueber_uns">Über Uns</a></li>
-        <li><a href="#aktuelles">Aktuelles</a></li>
-        <li><a href="#sportliches">Sportliches</a></li>
-        <li><a href="#">Gmiatlichs</a></li>
-        <li><a href="#">Vereinsmassigs</a></li>
-        <li><a href="#impressum">Impressum</a></li>
-      </ul>
-    </nav>
-
+    <nav class="navbar"></nav>
+    <div class="background"></div>
     <main>
       <section id="landing">
-        <ul class="landing_images">
-          <li>
-            <img src="./img/Logo_Halfing.png" alt="" />
-          </li>
-          <li>
-            <img src="./img/Logo_SGHalfing.png" alt="" />
-          </li>
-        </ul>
+        <img class="landing_background" src="./img/bavaria.avif" alt="" />
+        <img class="landing_logo" src="./img/Logo_SGHalfing.png" alt="" />
         <h3>Herzlich Willkommen bei der</h3>
         <h1>Schützengesellschaft Eintracht Halfing</h1>
         <h3>gegr. 1872 e.V.</h3>
@@ -41,7 +24,7 @@
 
       <section id="ueber_uns">
         <h2>Über Uns</h2>
-        <article>
+        <article id="mitmachen">
           <h3>Mitmachen</h3>
           <p>
             Sie finden uns in der "Heinrich-Beslmeisl-Halle" in der Holzhamer Straße 6. Über den
@@ -52,9 +35,9 @@
           <p>- Schützen ab 19:00 Uhr</p>
           <p>Neulinge und solche die es werden wollen sie immer Willkommen</p>
         </article>
-        <article>
+        <article id="vorstand">
           <h3>Vorstand</h3>
-          <img src="./img/2019_Vorstandschaft.jpg" alt="Foto des Vorstands 2019" />
+          <img src="./img/vorstand_small.jpg" alt="Foto des Vorstands 2019" />
           <p class="img_description">Stand 2019</p>
           <div class="grid_vorstand">
             <div>
@@ -107,16 +90,36 @@
             </div>
           </div>
         </article>
-        <article>
+        <article id="vereinsfoto">
           <h3>Vereinsfoto</h3>
           <h4>Aufgenommen anlässlich der 50 jährigen Fahnenweihe im Jahr 2017</h4>
-          <img
-            src="./img/2017_Vereinsfoto_zur_50jaehrigen_Fahnenweihe.jpg"
-            alt="Vereinsfoto von 2017"
-          />
+          <img src="./img/vereinsfoto_small.jpg" alt="Vereinsfoto von 2017" />
           <p class="img_description">
             Veröffentlichung mit freundlicher Genehmigung der Firma Foto Winkler
           </p>
+        </article>
+        <article id="freunde">
+          <h3>Freunde und Bekannte</h3>
+          <ul>
+            <li>
+              <a href="http://www.chiemgau-prien.de/"
+                ><img src="./img/Logo_GauChimgau.png" alt="" />
+                <p>Schützengau Chiemgau Prien</p></a
+              >
+            </li>
+            <li>
+              <a href="https://www.halfing.de/startseite-halfing"
+                ><img src="./img/Logo_Halfing.png" alt="" />
+                <p>Gemeinde Halfing</p></a
+              >
+            </li>
+            <li>
+              <a href="http://www.jungschuetzen-eggstaett.de/"
+                ><img src="./img/Logo_JungschuetzenEggstaett.png" alt="" />
+                <p>Jüngschützen Eggstätt</p></a
+              >
+            </li>
+          </ul>
         </article>
       </section>
 
@@ -150,7 +153,7 @@
             Corona bedingt ist die Dorfmeisterschaft im Jahr 2020 und auch 2021 leider ausgefallen.
             Es geht wieder aufwärts und wie hoffen auf ein baldiges Wiedersehen. (CK)
           </p>
-          <img src="./img/DSC_0103_bs.jpg" alt="" />
+          <img src="./img/wanderpokal_small.jpg" alt="" />
           <p>Zur Vorfreude! Wenigstens schon mal ein Bild vom Wanderpokal.</p>
         </article>
         <article>
@@ -251,8 +254,5 @@
         </article>
       </section>
     </main>
-
-    <script src="main.js"></script>
-    <script src="https://kit.fontawesome.com/12bc7dd6b9.js" crossorigin="anonymous"></script>
   </body>
 </html>

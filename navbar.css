@@ -5,8 +5,9 @@ nav {
   left: 0;
   width: 100%;
   height: var(--navbar_height);
+  z-index: 2;
   /* */
-  background-color: var(--navbar_darkBg);
+  background: var(--navbar_darkBg);
   color: var(--navbar_text);
   display: flex;
   justify-content: space-between;
@@ -58,7 +59,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: var(--navbar_accent);
-  transform: scaleX(0.95);
+  transform: translateY(3%);
 }
 
 @media (max-width: 1250px) {
@@ -93,11 +94,10 @@ nav ul li a:hover {
     top: var(--navbar_height);
     left: -100%;
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--navbar_lightBg);
+    background: var(--navbar_lightBg);
     transition: all 0.2s ease-in-out;
   }
 
