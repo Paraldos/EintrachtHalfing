@@ -99,6 +99,16 @@ img {
   padding-bottom: 0.5rem;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  * {
+    font-size: 16px;
+  }
+}
+
 /* ===================== article animation ===================== */
 article {
   transition: all 0.3s;
@@ -169,6 +179,10 @@ section h2 {
 }
 
 @media (max-width: 680px) {
+  section {
+    padding: 1rem;
+    padding-top: var(--navbar_height);
+  }
   #landing h1 {
     font-size: 2rem;
   }
@@ -225,8 +239,22 @@ section h2 {
 }
 
 @media (max-width: 680px) {
+  .grid_vorstand {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
+  }
   #freunde ul {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .grid_vorstand {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .grid_vorstand p {
+    text-align: center;
   }
 }
 
@@ -234,19 +262,4 @@ section h2 {
 #impressum p {
   padding: 0;
   padding-left: 1rem;
-}
-
-/* ===================== media querry ===================== */
-
-@media (max-width: 680px) {
-  section {
-    padding: 1rem;
-    padding-top: var(--navbar_height);
-  }
-
-  /* ueber uns */
-  .grid_vorstand {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 0.5rem;
-  }
 }
