@@ -136,6 +136,7 @@ section h2 {
 /* ===================== Landing ===================== */
 .landing_background {
   border: 0 solid black;
+  border-radius: 0;
   min-width: 100%;
   min-height: 100vh;
   position: absolute;
@@ -153,13 +154,6 @@ section h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.landing_logo {
-  height: 7rem;
-  border: none;
-  margin-bottom: 2rem;
-  display: none;
 }
 
 #landing h1 {
@@ -189,6 +183,16 @@ section h2 {
 }
 
 /* ===================== ueber uns ===================== */
+.unser_logo {
+  width: 300px;
+  max-width: 80%;
+  max-height: 80%;
+  border: none;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
 .grid_vorstand {
   padding: 0.5rem 0;
   width: 100%;
