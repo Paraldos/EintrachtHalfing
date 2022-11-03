@@ -37,8 +37,12 @@ main {
 }
 
 section {
-  padding: 1.5rem;
+  padding: 0.5rem;
   padding-top: var(--navbar_height);
+}
+
+section:last-child() {
+  border: none;
 }
 
 article {
@@ -91,6 +95,10 @@ img {
     var(--color_background_light),
     var(--color_background_dark)
   );
+}
+
+.blur {
+  filter: blur(10px);
 }
 
 .img_description {
@@ -266,4 +274,8 @@ section h2 {
 #impressum p {
   padding: 0;
   padding-left: 1rem;
+}
+
+#impressum a:hover {
+  color: var(--navbar_darkBg);
 }

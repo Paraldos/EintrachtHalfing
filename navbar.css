@@ -8,6 +8,7 @@ nav {
   z-index: 2;
   /* */
   background: var(--navbar_darkBg);
+  opacity: 0.98;
   color: var(--navbar_text);
   display: flex;
   justify-content: space-between;

@@ -63,3 +63,19 @@ ARTICLES.forEach((el) => {
 SECTION_H2.forEach((el) => {
   observer.observe(el);
 });
+
+// LANDER ===============================================================
+function replaceImg() {
+  var image = document.querySelector(".landing_background");
+  var bigImage = document.createElement("img");
+
+  bigImage.onload = function () {
+    image.src = this.src;
+    image.classList.remove("blur");
+  };
+
+  setTimeout(function () {
+    bigImage.src = "./img/PhotoHalfing.jpg";
+  }, 100);
+}
+replaceImg();
