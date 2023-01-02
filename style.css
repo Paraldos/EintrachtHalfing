@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
 :root {
   --navbar_darkBg: #1c6758;
@@ -168,7 +169,7 @@ section h2 {
   font-size: 3rem;
   text-align: center;
   padding: 1rem;
-  font-family: "Germania One", cursive;
+  font-family: 'Bitter', serif;
   text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff,
     1px -1px #fff, -1px 1px #fff;
 }
