@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitter&display=swap");
 
 :root {
   --navbar_darkBg: #1c6758;
@@ -143,6 +143,15 @@ section h2 {
 }
 
 /* ===================== Landing ===================== */
+#landing {
+  min-height: 100vh;
+  padding-top: var(--navbar_height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .landing_background {
   border: 0 solid black;
   border-radius: 0;
@@ -156,29 +165,20 @@ section h2 {
   padding: 0;
 }
 
-#landing {
-  min-height: 100vh;
-  padding-top: var(--navbar_height);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #landing h1 {
   font-size: 3rem;
   text-align: center;
   padding: 1rem;
-  font-family: 'Bitter', serif;
-  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff,
-    1px -1px #fff, -1px 1px #fff;
+  font-family: "Bitter", serif;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 #landing h3 {
   font-size: 1.5rem;
   padding: 0;
-  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff,
-    1px -1px #fff, -1px 1px #fff;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 @media (max-width: 680px) {
