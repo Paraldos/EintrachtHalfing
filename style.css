@@ -118,30 +118,6 @@ img {
   }
 }
 
-/* ===================== article animation ===================== */
-article {
-  transition: all 0.3s;
-  opacity: 0;
-  transform: translateX(-2%);
-}
-
-section h2 {
-  transition: all 0.3s;
-  opacity: 0;
-  transform: translateX(-2%);
-}
-
-.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-@media (prefers-reduce-motion) {
-  article {
-    transition: none;
-  }
-}
-
 /* ===================== Landing ===================== */
 #landing {
   min-height: 100vh;

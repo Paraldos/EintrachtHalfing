@@ -45,25 +45,6 @@ function addNavLinksListeners() {
 }
 addNavLinksListeners();
 
-// SCROLL ANIMATION ===============================================================
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
-  });
-});
-
-ARTICLES.forEach((el) => {
-  observer.observe(el);
-});
-
-SECTION_H2.forEach((el) => {
-  observer.observe(el);
-});
-
 // LANDER ===============================================================
 function replaceImg() {
   var image = document.querySelector(".landing_background");
