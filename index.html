@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eintracht Halfing</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <script defer src="main.js"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles/basics.css" />
+    <link rel="stylesheet" href="./styles/ueber_uns.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/navbar_mobile.css" />
+    <link rel="stylesheet" href="./styles/landing.css" />
+    <!-- scripts -->
     <script
       defer
       src="https://kit.fontawesome.com/12bc7dd6b9.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./scripts/navbar.js"></script>
+    <script defer src="./scripts/landing.js"></script>
   </head>
-
   <body>
-    <nav class="navbar"></nav>
-    <div class="background"></div>
+    <header>
+      <nav class="navbar">
+        <div class="navbar_burger">
+          <i class="navbar_burger_symbol fa-regular fa-circle-right"></i>
+        </div>
+        <a class="navbar_logo" href="#landing">SG Eintracht Halfing e.V.</a>
+        <ul class="nav_links">
+          <li><a class="" href="#ueber_uns">Über Uns</a></li>
+          <li><a class="" href="#aktuelles">Aktuelles</a></li>
+          <li><a class="" href="#sportliches">Sportliches</a></li>
+          <li><a class="" href="#impressum">Impressum</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <section id="landing">
+      <div id="landing">
         <img
           class="landing_background blur"
           src="./img/PhotoHalfing_small.jpg"
@@ -28,15 +45,17 @@
         <h3>Herzlich Willkommen bei der</h3>
         <h1>Schützengesellschaft Eintracht Halfing</h1>
         <h3>gegr. 1872 e.V.</h3>
-      </section>
+      </div>
 
       <section id="ueber_uns">
-        <h2>Über Uns</h2>
+        <h1>Über Uns</h1>
+
         <article>
           <img class="unser_logo" src="./img/Logo_SGHalfing.png" alt="" />
         </article>
+
         <article id="mitmachen">
-          <h3>Mitmachen</h3>
+          <h2>Mitmachen</h2>
           <p>
             Sie finden uns in der "Heinrich-Beslmeisl-Halle" in der Holzhamer
             Straße 6. Über den Seiteneingang im Angerweg kommen Sie über die
@@ -49,73 +68,82 @@
             Neulinge und solche, die es werden wollen, sind immer Willkommen
           </p>
         </article>
+
         <article id="vorstand">
-          <h3>Vorstand</h3>
-          <img src="./img/vorstand_small.jpg" alt="Foto des Vorstands 2019" />
-          <p class="img_description">Bild von 2019</p>
+          <h2>Vorstand</h2>
+
+          <figure>
+            <img src="./img/vorstand_small.jpg" alt="Foto des Vorstands 2019" />
+            <figcaption>Bild von 2019</figcaption>
+          </figure>
           <div class="grid_vorstand">
             <div>
-              <p>1. Schützenmeister</p>
               <p>Paul Anner jun.</p>
+              <p>1. Schützenmeister</p>
             </div>
             <div>
+              <p>Christa Schuster</p>
               <p>2. Schützenmeister</p>
-              <p>Christa Schuster</p>
             </div>
             <div>
-              <p>1. Kassier</p>
               <p>Corinna Hillbrecht</p>
+              <p>1. Kassier</p>
             </div>
             <div>
-              <p>2. Kassier / Beisitzer</p>
               <p>Claus Kaulisch</p>
+              <p>2. Kassier / Beisitzer</p>
             </div>
             <div>
-              <p>Schriftführer</p>
               <p>Doris Beyer</p>
+              <p>SChriftführer</p>
             </div>
             <div>
-              <p>Sportleiter</p>
               <p>Thomas Anner</p>
+              <p>Sportleiter</p>
             </div>
             <div>
-              <p>Fähnrich</p>
               <p>Benedikt Leitgeb</p>
+              <p>Fähnrich</p>
             </div>
             <div>
-              <p>Zeugwart</p>
               <p>Josef Lipp</p>
+              <p>Zeugwart</p>
             </div>
             <div>
-              <p>Jugendleiter</p>
               <p>Marc Beyer</p>
+              <p>Jugendleiter</p>
             </div>
             <div>
-              <p>Damenleiterin</p>
               <p>Christa Schuster</p>
+              <p>Damenleiterin</p>
             </div>
             <div>
-              <p>Ehrenschützenmeister</p>
               <p>Sepp Schuster sen.</p>
+              <p>Ehrenschützenmeister</p>
             </div>
             <div>
-              <p>Ehrenschützenmeister</p>
               <p>Hans Aicher</p>
+              <p>Ehrenschützenmeister</p>
             </div>
           </div>
         </article>
+
         <article id="vereinsfoto">
-          <h3>Vereinsfoto</h3>
+          <h2>Vereinsfoto</h2>
           <h4>
             Aufgenommen anlässlich der 50 jährigen Fahnenweihe im Jahr 2017
           </h4>
-          <img src="./img/vereinsfoto_small.jpg" alt="Vereinsfoto von 2017" />
-          <p class="img_description">
-            Veröffentlichung mit freundlicher Genehmigung der Firma Foto Winkler
-          </p>
+          <figure>
+            <img src="./img/vereinsfoto_small.jpg" alt="Vereinsfoto von 2017" />
+            <figcaption>
+              Veröffentlichung mit freundlicher Genehmigung der Firma Foto
+              Winkler
+            </figcaption>
+          </figure>
         </article>
+
         <article id="freunde">
-          <h3>Freunde und Bekannte</h3>
+          <h2>Freunde und Bekannte</h2>
           <ul>
             <li>
               <a href="http://www.chiemgau-prien.de/"
@@ -138,15 +166,14 @@
           </ul>
         </article>
       </section>
-
       <section id="aktuelles">
-        <h2>Aktuelles</h2>
+        <h1>Aktuelles</h1>
         <article>
-          <h3>
+          <p>
             66. Luftgewehr-Gauschießen des Chiemgau Prien und Paul
             Anner-Gedächtnisschießen der Schützengesellschaft "Eintracht
             Halfing" gegr. 1872 e. V.
-          </h3>
+          </p>
           <h4>Das Gauschießen geht weiter.</h4>
           <p>
             Die Halfinger Schützen freuen sich nun endlich, nach den ganzen
@@ -160,19 +187,17 @@
           </p>
           <p>"Gut Schuß"</p>
         </article>
-
         <article>
-          <h3>Schießergebnisse des letzten Vereinsabends</h3>
+          <h2>Schießergebnisse des letzten Vereinsabends</h2>
           <img src="./img/Schießergebnisse_01.jpeg" alt="" />
           <img src="./img/Schießergebnisse_02.jpeg" alt="" />
           <img src="./img/Schießergebnisse_03.jpeg" alt="" />
         </article>
       </section>
-
       <section id="sportliches">
-        <h2>Sportliches</h2>
+        <h1>Sportliches</h1>
         <article>
-          <h3>Halfinger Dorfmeisterschaft im Schießen</h3>
+          <h2>Halfinger Dorfmeisterschaft im Schießen</h2>
           <p>
             Corona bedingt ist die Dorfmeisterschaft im Jahr 2020 und auch 2021
             leider ausgefallen. Es geht wieder aufwärts und wir hoffen auf ein
@@ -182,7 +207,7 @@
           <p>Zur Vorfreude! Wenigstens schon mal ein Bild vom Wanderpokal.</p>
         </article>
         <article>
-          <h3>Die Könige 2020 stehen fest</h3>
+          <h2>Die Könige 2020 stehen fest</h2>
           <p>
             Nachdem uns in der Saison 2019/20 Corona einen dicken Strich durch
             das Schützenjahr gemacht hatte, konnten wir zu Beginn der neuen
@@ -240,35 +265,38 @@
           </p>
         </article>
       </section>
-
       <section id="impressum">
-        <h2>Impressum</h2>
+        <h1>Impressum</h1>
 
         <article>
-          <h4>Schützengesellschaft Eintracht Halfing gegr. 1872 e.V.</h4>
+          <h2>Schützengesellschaft Eintracht Halfing gegr. 1872 e.V.</h2>
           <p>Holzhamer Str. 28</p>
           <p>83128 Halfing</p>
         </article>
 
         <article>
-          <h4>Gemeinschaftlich vertretungsberechtigt:</h4>
-          <h4>1. Vorstand:</h4>
-          <p>Paul Anner</p>
-          <p>Holzhamer Str. 28</p>
-          <p>83128 Halfing</p>
-          <p><b>Tel:</b> +49 8055 904657</p>
-          <p>
-            <b>E-Mail: </b>
-            <a href="mailto:schuetzenmeister@eintracht-halfing.de"
-              >schuetzenmeister@eintracht-halfing.de</a
-            >
-          </p>
+          <h2>Gemeinschaftlich vertretungsberechtigt:</h2>
+          <div>
+            <h3>1. Vorstand:</h3>
+            <p>Paul Anner</p>
+            <p>Holzhamer Str. 28</p>
+            <p>83128 Halfing</p>
+            <p><b>Tel:</b> +49 8055 904657</p>
+            <p>
+              <b>E-Mail:</b>
+              <a href="mailto:schuetzenmeister@eintracht-halfing.de"
+                >schuetzenmeister@eintracht-halfing.de</a
+              >
+            </p>
+          </div>
           <br />
-          <h4>2. Vorstand:</h4>
-          <p>Christa Schuster</p>
-          <p>Gunzenham 10</p>
-          <p>83128 Halfing</p>
-          <p><b>Tel:</b> +49 8055 646</p>
+          <div>
+            <h3>2. Vorstand:</h3>
+            <p>Christa Schuster</p>
+            <p>Gunzenham 10</p>
+            <p>83128 Halfing</p>
+            <p><b>Tel:</b> +49 8055 646</p>
+          </div>
         </article>
 
         <article>
@@ -278,20 +306,20 @@
         </article>
 
         <article>
-          <h4>V.i.S.d § 18 Abs. 2 MStV</h4>
+          <h2>V.i.S.d § 18 Abs. 2 MStV</h2>
           <p>Paul Anner</p>
           <p>Holzhamer Str. 28</p>
           <p>83128 Halfing</p>
         </article>
 
         <article>
-          <h4>Webdesign</h4>
+          <h2>Webdesign</h2>
           <p>Sieghard Hillbrecht</p>
           <p>Blumenweg 1</p>
           <p>83093 Bad Endorf</p>
           <p>
-            <b>E-Mail:</b>
-            <a href="mailto:hillbrecht.s@gmail.com">hillbrecht.s@gmail.com</a>
+            <b>E-Mail:</b
+            ><a href="mailto:hillbrecht.s@gmail.com">hillbrecht.s@gmail.com</a>
           </p>
         </article>
       </section>

@@ -1,0 +1,80 @@
+/* ===================== ueber uns ===================== */
+.unser_logo {
+  width: 300px;
+  max-width: 80%;
+  max-height: 80%;
+  border: none;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.grid_vorstand {
+  padding: 0.5rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+}
+
+.grid_vorstand p {
+  padding: 0;
+}
+
+#freunde h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#freunde ul {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#freunde ul li {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+#freunde img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+#freunde ul a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#freunde ul li:hover {
+  transform: translateY(2%);
+}
+
+#freunde img {
+  border: none;
+}
+
+@media (max-width: 680px) {
+  .grid_vorstand {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
+  }
+  #freunde ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .grid_vorstand {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .grid_vorstand p {
+    text-align: center;
+  }
+}
